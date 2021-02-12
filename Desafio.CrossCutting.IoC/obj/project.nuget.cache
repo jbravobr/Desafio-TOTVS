@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qVm7t1JogJHwmxvELLryeMEY2tLVUTBcgxtTHNVjw5FF/oO+6s+0YHHrxnImGTtF3qTDCvmdOcUTIE5697vnDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\Desafio.CrossCutting.IoC\\Desafio.CrossCutting.IoC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\simpleinjector\\5.2.1\\simpleinjector.5.2.1.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

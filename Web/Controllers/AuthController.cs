@@ -27,7 +27,7 @@ namespace Web.Controllers
         {
             try
             {
-                var userExists = null;
+                var userExists = new UserViewModel();
                 if (userExists == null || userExists.Password != user.Password)
                     return BadRequest(new { Message = "Email e/ou senha está(ão) inválido(s)." });
 
