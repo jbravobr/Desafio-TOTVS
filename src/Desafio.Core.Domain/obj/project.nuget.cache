@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AP7Xc9On3U52UckacuvmxX04/zjiTn0Jd1Iz/9C9r016E0v+FfrOzEcIXdQAsakCMMVTM2CHSqusMMAQAjbMKA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
