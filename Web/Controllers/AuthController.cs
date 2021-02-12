@@ -9,6 +9,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
