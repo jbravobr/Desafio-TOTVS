@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Desafio.Core.Domain.Models;
+using Desafio.Core.Services.Services.Contracts;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.IO;
@@ -17,11 +19,16 @@ namespace Web.Middlewares
         private readonly ILogger _logger;
         private readonly RecyclableMemoryStreamManager _recyclableMemoryStreamManager;
 
-        public RequestResponseLoggingMiddleware(RequestDelegate next, ILoggerFactory loggerFactory)
+        private readonly IGatewayLogServices _gatewayLogServices;
+
+        public RequestResponseLoggingMiddleware(RequestDelegate next,
+                                                ILoggerFactory loggerFactory,
+                                                IGatewayLogServices gatewayLogServices)
         {
             _next = next;
             _logger = loggerFactory.CreateLogger<RequestResponseLoggingMiddleware>();
             _recyclableMemoryStreamManager = new RecyclableMemoryStreamManager();
+            _gatewayLogServices = gatewayLogServices;
         }
 
         private async Task LogRequest(HttpContext context)
@@ -36,6 +43,20 @@ namespace Web.Middlewares
                                    $"Path: {context.Request.Path} " +
                                    $"QueryString: {context.Request.QueryString} " +
                                    $"Request Body: {ReadStreamInChunks(requestStream)}");
+
+            var log = new Log()
+            {
+                Request = $"Http Request Information:{Environment.NewLine}" +
+                                   $"Schema:{context.Request.Scheme} " +
+                                   $"Host: {context.Request.Host} " +
+                                   $"Path: {context.Request.Path} " +
+                                   $"QueryString: {context.Request.QueryString} " +
+                                   $"Request Body: {ReadStreamInChunks(requestStream)}",
+                CreateAt = DateTime.Now,
+                Id = Guid.NewGuid()
+            };
+            _gatewayLogServices.Create(log);
+
             context.Request.Body.Position = 0;
         }
 
@@ -56,6 +77,19 @@ namespace Web.Middlewares
                                    $"Path: {context.Request.Path} " +
                                    $"QueryString: {context.Request.QueryString} " +
                                    $"Response Body: {text}");
+
+            var log = new Log()
+            {
+                Response = $"Http Response Information:{Environment.NewLine}" +
+                                   $"Schema:{context.Request.Scheme} " +
+                                   $"Host: {context.Request.Host} " +
+                                   $"Path: {context.Request.Path} " +
+                                   $"QueryString: {context.Request.QueryString} " +
+                                   $"Response Body: {text}",
+                CreateAt = DateTime.Now,
+                Id = Guid.NewGuid()
+            };
+            _gatewayLogServices.Create(log);
 
             await responseBody.CopyToAsync(originalBodyStream);
         }

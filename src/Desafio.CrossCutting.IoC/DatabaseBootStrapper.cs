@@ -25,7 +25,7 @@ namespace Desafio.CrossCutting.IoC
                 return new DatabaseContext(builder.Options);
             }, Lifestyle.Scoped);
 
-            container.Register<IGatewatLogRepository, GatewayLogRepository>(Lifestyle.Transient);
+            container.Register<IGatewayLogRepository, GatewayLogRepository>(Lifestyle.Transient);
         }
     }
 }

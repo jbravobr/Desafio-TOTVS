@@ -1,5 +1,7 @@
 ﻿using Desafio.Core.Services.Contracts;
 using Desafio.Core.Services.Implementations;
+using Desafio.Core.Services.Services.Contracts;
+using Desafio.Core.Services.Services.Implementations;
 using SimpleInjector;
 
 namespace Desafio.CrossCutting.IoC
@@ -10,6 +12,7 @@ namespace Desafio.CrossCutting.IoC
         {
             container.Register<IUserServices, UserServices>(Lifestyle.Transient);
             container.Register<IPdvServices, PdvServices>(Lifestyle.Transient);
+            container.Register<IGatewayLogServices, GatewayLogServices>(Lifestyle.Transient);
         }
     }
 }
