@@ -1,6 +1,0 @@
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Web\obj\Debug\net5.0\Web.csprojAssemblyReference.cache
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Web\obj\Debug\net5.0\Web.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Web\obj\Debug\net5.0\Web.AssemblyInfoInputs.cache
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Web\obj\Debug\net5.0\Web.AssemblyInfo.cs
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Web\obj\Debug\net5.0\Web.csproj.CoreCompileInputs.cache
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Web\obj\Debug\net5.0\Web.MvcApplicationPartsAssemblyInfo.cache

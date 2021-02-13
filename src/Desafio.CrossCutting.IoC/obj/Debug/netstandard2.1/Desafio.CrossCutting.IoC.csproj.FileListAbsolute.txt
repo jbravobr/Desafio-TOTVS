@@ -1,4 +1,0 @@
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.CrossCutting.IoC\obj\Debug\netstandard2.1\Desafio.CrossCutting.IoC.csprojAssemblyReference.cache
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.CrossCutting.IoC\obj\Debug\netstandard2.1\Desafio.CrossCutting.IoC.AssemblyInfoInputs.cache
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.CrossCutting.IoC\obj\Debug\netstandard2.1\Desafio.CrossCutting.IoC.AssemblyInfo.cs
-C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.CrossCutting.IoC\obj\Debug\netstandard2.1\Desafio.CrossCutting.IoC.csproj.CoreCompileInputs.cache
