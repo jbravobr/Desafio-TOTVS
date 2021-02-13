@@ -1,8 +1,4 @@
 ﻿using FluentValidation;
-using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Desafio.Core.Domain.Models.Validations
 {

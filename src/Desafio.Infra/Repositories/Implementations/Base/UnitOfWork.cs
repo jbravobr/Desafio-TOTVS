@@ -4,6 +4,7 @@ using Desafio.Infra.Repositories.Contracts.Base;
 using Desafio.Infra.Repositories.Contracts.Writes;
 using Desafio.Infra.Repositories.Implementations.Base;
 using Desafio.Infra.Repositories.Implementations.Reads;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,9 +24,9 @@ namespace Desafio.Infra.Repositories.Implementations
 
         private bool _disposed;
 
-        public UnitOfWork(string connectionString, DatabaseContext databaseContext)
+        public UnitOfWork(IConfiguration configuration, DatabaseContext databaseContext)
         {
-            _connection = new SqlConnection(connectionString);
+            _connection = new SqlConnection(configuration.GetConnectionString("dbPDV"));
             _connection.Open();
             _transaction = _connection.BeginTransaction();
 

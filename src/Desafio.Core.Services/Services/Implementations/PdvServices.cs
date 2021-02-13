@@ -1,7 +1,6 @@
 ﻿using Desafio.Core.Domain.Models;
 using Desafio.Core.Domain.Models.Enums;
 using Desafio.Core.Services.Contracts;
-using Desafio.Infra.Repositories.Contracts;
 using Desafio.Infra.Repositories.Contracts.Base;
 using System;
 using System.Collections.Generic;
