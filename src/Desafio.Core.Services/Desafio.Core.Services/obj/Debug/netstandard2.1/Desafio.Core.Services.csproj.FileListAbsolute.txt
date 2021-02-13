@@ -1,0 +1,14 @@
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.csprojAssemblyReference.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.AssemblyInfoInputs.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.AssemblyInfo.cs
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Core.Services.deps.json
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Core.Services.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Core.Services.pdb
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Core.Domain.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Infra.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Core.Domain.pdb
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\bin\Debug\netstandard2.1\Desafio.Infra.pdb
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.csproj.CopyComplete
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Services\Desafio.Core.Services\obj\Debug\netstandard2.1\Desafio.Core.Services.pdb

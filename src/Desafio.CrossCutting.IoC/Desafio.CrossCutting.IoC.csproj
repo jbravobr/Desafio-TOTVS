@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="5.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Desafio.Core.Domain\Desafio.Core.Domain.csproj" />
+    <ProjectReference Include="..\Desafio.Core.Services\Desafio.Core.Services\Desafio.Core.Services.csproj" />
+    <ProjectReference Include="..\Desafio.Infra\Desafio.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

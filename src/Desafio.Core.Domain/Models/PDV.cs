@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
+﻿using Desafio.Core.Domain.Exceptions;
 using Desafio.Core.Domain.Models.Validations;
 using FluentValidation.Results;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Desafio.Core.Domain.Models
 {
@@ -15,6 +15,10 @@ namespace Desafio.Core.Domain.Models
         public List<int> BankNotesToReturn { get; private set; }
         public List<int> BankCoinsToReturn { get; private set; }
 
+        public bool IsValid { get; set; }
+        public bool IsOpen { get; set; }
+        public bool? IsClosed { get; set; }
+
         public Pdv()
         {
             BankCoins = new List<int>();
@@ -24,103 +28,110 @@ namespace Desafio.Core.Domain.Models
             BankCoinsToReturn = new List<int>();
         }
 
-        public bool InitiatePdv(List<int> notes = null, List<int> coins = null)
+        public void InitiatePdv(List<int> notes = null, List<int> coins = null)
         {
             if (notes != null && notes.Any())
             {
                 BankNotes = notes;
+            }
+            else
+            {
+                BankNotes = new List<int> { 100, 50, 20, 10 };
             }
 
             if (coins != null && coins.Any())
             {
                 BankCoins = coins;
             }
+            else
+            {
+                BankCoins = new List<int> { 50, 10, 05, 01 };
+            }
 
-            if (true)
+            if (Validate().IsValid)
             {
                 BankNotes = BankNotes.OrderByDescending(b => b).ToList();
                 BankCoins = BankCoins.OrderByDescending(b => b).ToList();
-
-                return true;
+                IsValid = true;
+                IsOpen = true;
             }
             else
             {
-                throw new InvalidOperationException("Erro ao inicializar o Pdv");
+                throw new PdvIniatializationError("Erro ao inicializar o Pdv");
             }
         }
 
-        //public object Compute(double total, double amountPayed)
-        //{
-        //    if (total > amountPayed)
-        //    {
-        //        throw new InvalidOperationException("Valor pago não cobre o valor devido!");
-        //    }
+        private bool CheckBalance(double amount)
+        {
+            if (BankNotes.Sum(b => b) < amount ||
+                BankCoins.Sum(b => b) < amount)
+            {
+                return false;
+            }
 
-        //    var change = amountPayed - total;
-        //    var interger = Convert.ToInt32(Math.Floor(change));
-        //    var fractional = Convert.ToInt32(Math.Round((change - (int)change) * 100));
+            return true;
+        }
 
-        //    if (change > 0)
-        //    {
-        //        for (int i = 0; i < BankNotes.Count; i++)
-        //        {
-        //            var qtd_notes = interger / BankNotes[i];
-        //            //notas_entregues[i] = qtd;
+        public void Compute(double total, double amountPayed)
+        {
+            if (total > amountPayed)
+            {
+                throw new PaymentInsufficientError("Valor pago não cobre o valor devido!");
+            }
 
-        //            interger -= (qtd_notes * BankNotes[i]);
-        //        }
+            var change = amountPayed - total;
 
-        //        if (interger > 0)
-        //        {
-        //            for (int i = 0; i < BankCoins.Count; i++)
-        //            {
-        //                var qtd_coins = interger * 100 / BankCoins[i];
-        //                //moedas_entregues[i] = qtd_coins;
+            if (!CheckBalance(change))
+            {
+                throw new InsufficientPdvBalanceError("Saldo indiponível para realização do troco");
+            }
 
-        //                interger -= (qtd_coins * BankCoins[i] / 100);
-        //            }
-        //        }
+            var interger = Convert.ToInt32(Math.Floor(change));
+            var fractional = Convert.ToInt32(Math.Round((change - (int)change) * 100));
 
-        //        for (int i = 0; i < BankCoins.Count; i++)
-        //        {
-        //            var qtd_coins = fractional / BankCoins[i];
-        //            //moedas_entregues[i] += qtd_moeda;
+            if (change > 0)
+            {
+                for (int i = 0; i < BankNotes.Count; i++)
+                {
+                    var qtd_notes = interger / BankNotes[i];
+                    BankNotesToReturn.Add(qtd_notes);
 
-        //            fractional -= (qtd_coins * BankCoins[i]);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        throw new InvalidOperationException("Cliente não necessita de troco.");
-        //    }
+                    interger -= (qtd_notes * BankNotes[i]);
+                }
 
-        //    if (notas_entregues.Length > 0)
-        //    {
-        //        Console.ForegroundColor = ConsoleColor.Blue;
+                if (interger > 0)
+                {
+                    for (int i = 0; i < BankCoins.Count; i++)
+                    {
+                        var qtd_coins = interger * 100 / BankCoins[i];
+                        BankCoinsToReturn.Add(qtd_coins);
 
-        //        Console.WriteLine($"O troco será de: R$ {troco}");
+                        interger -= (qtd_coins * BankCoins[i] / 100);
+                    }
+                }
 
-        //        Console.WriteLine($"Notas de 100: {notas_entregues[0]}");
-        //        Console.WriteLine($"Notas de 50: {notas_entregues[1]}");
-        //        Console.WriteLine($"Notas de 20: {notas_entregues[2]}");
-        //        Console.WriteLine($"Notas de 10: {notas_entregues[3]}");
+                for (int i = 0; i < BankCoins.Count; i++)
+                {
+                    var qtd_coins = fractional / BankCoins[i];
+                    BankCoinsToReturn.Add(qtd_coins);
 
-        //        Console.WriteLine($"Moedas de 50 centavos: {moedas_entregues[0]}");
-        //        Console.WriteLine($"Moedas de 10 centavos: {moedas_entregues[1]}");
-        //        Console.WriteLine($"Moedas de 5 centavos: {moedas_entregues[2]}");
-        //        Console.WriteLine($"Moedas de 1 centavos: {moedas_entregues[3]}");
-        //    }
+                    fractional -= (qtd_coins * BankCoins[i]);
+                }
 
-        //    Console.WriteLine("Pressione qualquer tecla para sair...");
-        //    Console.ReadKey();
-        //}
+                IsClosed = true;
+            }
+            else
+            {
+                throw new InvalidOperationException("Cliente não necessita de troco.");
+            }
+        }
+
+        private ValidationResult Validate()
+        {
+            PdvValidator validator = new PdvValidator();
+            ValidationResult results = validator.Validate(this);
+
+            return results;
+        }
     }
-
-    //private ValidationResult Validate()
-    //{
-    //    PdvValidator validator = new PdvValidator();
-    //    ValidationResult results = validator.Validate(this);
-
-    //    return results;
-    //}
 }

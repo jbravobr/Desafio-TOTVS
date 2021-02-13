@@ -1,11 +1,12 @@
-﻿using Desafio.Core.Domain.Models;
+﻿using Desafio.Infra.Repositories.Contracts.Writes;
 
 namespace Desafio.Infra.Repositories.Contracts.Base
 {
     public interface IUnitOfWork
     {
-        IPdvReadRepository PdvRepository { get; }
-        IUserReadRepository UserRepository { get; }
+        IPdvRepository PdvRepository { get; }
+        IUserRepository UserRepository { get; }
+        IPdvHistoryRepository PdvHistoryRepository { get; }
 
         void Commit();
     }

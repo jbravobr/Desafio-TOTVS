@@ -7,16 +7,20 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["Desafio.csproj", ""]
-RUN dotnet restore "./Desafio.csproj"
+COPY ["src/Web/Web.csproj", "src/Web/"]
+COPY ["src/Desafio.CrossCutting.IoC/Desafio.CrossCutting.IoC.csproj", "src/Desafio.CrossCutting.IoC/"]
+COPY ["src/Desafio.Core.Domain/Desafio.Core.Domain.csproj", "src/Desafio.Core.Domain/"]
+COPY ["src/Desafio.Tests/Desafio.Tests.csproj", "src/Desafio.Tests/"]
+COPY ["src/Desafio.Infra/Desafio.Infra.csproj", "src/Desafio.Infra/"]
+RUN dotnet restore "src/Web/Web.csproj"
 COPY . .
-WORKDIR "/src/."
-RUN dotnet build "Desafio.csproj" -c Release -o /app/build
+WORKDIR "/src/Web"
+RUN dotnet build "Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Desafio.csproj" -c Release -o /app/publish
+RUN dotnet publish "Web.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Desafio.dll"]
+ENTRYPOINT ["dotnet", "Web.dll"]

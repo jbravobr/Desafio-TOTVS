@@ -1,6 +1,9 @@
-﻿using Desafio.Core.Domain.Models;
+﻿using Desafio.Infra.Repositories.Context;
 using Desafio.Infra.Repositories.Contracts;
 using Desafio.Infra.Repositories.Contracts.Base;
+using Desafio.Infra.Repositories.Contracts.Writes;
+using Desafio.Infra.Repositories.Implementations.Base;
+using Desafio.Infra.Repositories.Implementations.Reads;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,25 +14,37 @@ namespace Desafio.Infra.Repositories.Implementations
     {
         private IDbConnection _connection;
         private IDbTransaction _transaction;
-        private IUserReadRepository _userReadRepository;
-        private IPdvReadRepository _pdvReadRepository;
+        protected DatabaseContext _databaseContext;
+
+        private IUserRepository _userReadRepository;
+        private IPdvRepository _pdvReadRepository;
+
+        private IPdvHistoryRepository _pdvHistoryRepository;
+
         private bool _disposed;
 
-        public UnitOfWork(string connectionString)
+        public UnitOfWork(string connectionString, DatabaseContext databaseContext)
         {
             _connection = new SqlConnection(connectionString);
             _connection.Open();
             _transaction = _connection.BeginTransaction();
+
+            _databaseContext = databaseContext;
         }
 
-        public IUserReadRepository UserRepository
+        public IUserRepository UserRepository
         {
-            get { return _userReadRepository ?? (_userReadRepository = new UserReadRepository(_transaction)); }
+            get { return _userReadRepository ??= new UserRepository(_transaction); }
         }
 
-        public IPdvReadRepository PdvRepository
+        public IPdvRepository PdvRepository
         {
-            get { return _pdvReadRepository ?? (_pdvReadRepository = new PdvReadRepository(_transaction)); }
+            get { return _pdvReadRepository ??= new PdvRepository(_transaction); }
+        }
+
+        public IPdvHistoryRepository PdvHistoryRepository
+        {
+            get { return _pdvHistoryRepository ??= new PdvHistoryRepository(_databaseContext); }
         }
 
         public void Commit()
