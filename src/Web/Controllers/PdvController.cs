@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using Web.Models.Request;
+using Web.Models.Response;
 
 namespace Web.Controllers
 {
@@ -28,7 +29,7 @@ namespace Web.Controllers
                 var pdvResult = _pdvServices.PayBill(request.AmountPaid, request.TotalPayable);
                 if (pdvResult.IsValid)
                 {
-                    return Ok(pdvResult);
+                    return Ok(new PaymentResponse(pdvResult.BankNotesToReturn, pdvResult.BankCoinsToReturn));
                 }
 
                 return BadRequest();

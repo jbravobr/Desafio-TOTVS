@@ -28,6 +28,9 @@ namespace Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            #region Swagger
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web", Version = "v1" });
@@ -55,6 +58,8 @@ namespace Web
                     }
                 });
             });
+
+            #endregion Swagger
 
             #region JWT Config
 
