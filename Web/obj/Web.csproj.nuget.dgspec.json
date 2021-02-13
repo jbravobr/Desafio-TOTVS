@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -31,11 +31,14 @@
           "https://www.myget.org/F/applicationinsights-sdk-labs/": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj": {
                 "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj"
+              },
+              "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj": {
+                "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj"
               }
             }
           }
@@ -47,15 +50,9 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
             "SimpleInjector": {
               "target": "Package",
               "version": "[5.2.1, )"
@@ -71,6 +68,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
@@ -94,7 +96,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -102,8 +104,8 @@
           "https://www.myget.org/F/applicationinsights-sdk-labs/": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -114,14 +116,16 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "FluentValidation": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[9.5.1, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -134,6 +138,89 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj",
+        "projectName": "Desafio.Infra",
+        "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj",
+        "packagesPath": "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodrigo Amaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/applicationinsights-sdk-labs/": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }

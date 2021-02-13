@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.CrossCutting.IoC", "Desafio.CrossCutting.IoC\Desafio.CrossCutting.IoC.csproj", "{A06F8027-85D7-4158-AB37-D204050FD632}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{422CC1DB-2162-4664-96A7-C5434D387330}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{A06F8027-85D7-4158-AB37-D204050FD632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06F8027-85D7-4158-AB37-D204050FD632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A06F8027-85D7-4158-AB37-D204050FD632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{422CC1DB-2162-4664-96A7-C5434D387330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{422CC1DB-2162-4664-96A7-C5434D387330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{422CC1DB-2162-4664-96A7-C5434D387330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{422CC1DB-2162-4664-96A7-C5434D387330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

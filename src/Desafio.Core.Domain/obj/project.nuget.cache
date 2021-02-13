@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AP7Xc9On3U52UckacuvmxX04/zjiTn0Jd1Iz/9C9r016E0v+FfrOzEcIXdQAsakCMMVTM2CHSqusMMAQAjbMKA==",
+  "dgSpecHash": "AcnTi4UratsC8NTzCS7fn/nGNwzqZmzMolS0uKhOQnHO+PK6bNzVMAj7ZqJ/hKCZ/RbDbOWFyo3JUX8lvHe4TQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
+    "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

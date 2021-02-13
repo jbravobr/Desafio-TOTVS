@@ -1,0 +1,16 @@
+services:
+  web:
+    build:
+      context: C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS
+      dockerfile: Web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: web
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Rodrigo Amaro\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Rodrigo Amaro\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

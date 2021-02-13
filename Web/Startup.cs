@@ -66,7 +66,6 @@ namespace Web
                        .AddControllerActivation();
 
                 options.AddLogging();
-                options.AddLocalization();
             });
 
             InitializeContainer();
@@ -77,6 +76,7 @@ namespace Web
         private void InitializeContainer()
         {
             SimpleInjectorBootStrapper.RegisterServices(container);
+            DatabaseBootStrapper.RegisterServices(container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
