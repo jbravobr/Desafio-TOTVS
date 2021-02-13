@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <Folder Include="Repositories\" />
-    <Folder Include="Domain\Services\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Desafio.Core.Domain\Desafio.Core.Domain.csproj" />
+    <ProjectReference Include="..\Desafio.Core.Services\Desafio.Core.Services.csproj" />
     <ProjectReference Include="..\Desafio.Infra\Desafio.Infra.csproj" />
   </ItemGroup>
 </Project>
