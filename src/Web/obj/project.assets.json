@@ -7212,8 +7212,8 @@
     },
     "Desafio.Core.Services/1.0.0": {
       "type": "project",
-      "path": "../Desafio.Core.Services/Desafio.Core.Services/Desafio.Core.Services.csproj",
-      "msbuildProject": "../Desafio.Core.Services/Desafio.Core.Services/Desafio.Core.Services.csproj"
+      "path": "../Desafio.Core.Services/Desafio.Core.Services.csproj",
+      "msbuildProject": "../Desafio.Core.Services/Desafio.Core.Services.csproj"
     },
     "Desafio.CrossCutting.IoC/1.0.0": {
       "type": "project",
@@ -7228,7 +7228,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Desafio.Core.Services >= 1.0.0",
       "Desafio.CrossCutting.IoC >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.3",
       "Microsoft.IO.RecyclableMemoryStream >= 1.4.0",
@@ -7272,9 +7271,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
-              "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj"
-            },
             "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.CrossCutting.IoC\\Desafio.CrossCutting.IoC.csproj": {
               "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.CrossCutting.IoC\\Desafio.CrossCutting.IoC.csproj"
             }

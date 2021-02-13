@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
+    "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj",
         "projectName": "Desafio.Core.Services",
-        "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj",
+        "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj",
         "packagesPath": "C:\\Users\\Rodrigo Amaro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\obj\\",
+        "outputPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -174,8 +174,8 @@
               "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj": {
                 "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj"
               },
-              "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
-                "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj"
+              "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
+                "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj"
               },
               "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj": {
                 "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj"
@@ -325,9 +325,6 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
-                "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj"
-              },
               "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.CrossCutting.IoC\\Desafio.CrossCutting.IoC.csproj": {
                 "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.CrossCutting.IoC\\Desafio.CrossCutting.IoC.csproj"
               }

@@ -7505,8 +7505,8 @@
     },
     "Desafio.Core.Services/1.0.0": {
       "type": "project",
-      "path": "../Desafio.Core.Services/Desafio.Core.Services/Desafio.Core.Services.csproj",
-      "msbuildProject": "../Desafio.Core.Services/Desafio.Core.Services/Desafio.Core.Services.csproj"
+      "path": "../Desafio.Core.Services/Desafio.Core.Services.csproj",
+      "msbuildProject": "../Desafio.Core.Services/Desafio.Core.Services.csproj"
     },
     "Desafio.Infra/1.0.0": {
       "type": "project",
@@ -7560,8 +7560,8 @@
             "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj": {
               "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Domain\\Desafio.Core.Domain.csproj"
             },
-            "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
-              "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services\\Desafio.Core.Services.csproj"
+            "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj": {
+              "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Core.Services\\Desafio.Core.Services.csproj"
             },
             "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj": {
               "projectPath": "C:\\Users\\Rodrigo Amaro\\source\\repos\\Desafio-TOTOVS\\src\\Desafio.Infra\\Desafio.Infra.csproj"

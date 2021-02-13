@@ -9,7 +9,7 @@ namespace Desafio.Tests.Domain.Models
     {
         private List<int> GenerateTestBankNotes => new List<int> { 100, 50, 20, 10 };
         private List<int> GenerateTestBankCoins => new List<int> { 50, 10, 05, 01 };
-        private List<int> GenerateTestBankNotesInsufficient => new List<int> { 50, 10, 05, 01 };
+        private List<int> GenerateTestBankNotesInsufficient => new List<int> { 10 };
 
         [Fact]
         public void InitiatePdv_With_Positive_Balance_For_BankNotes()

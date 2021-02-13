@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "src\Web\Web.csproj",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.CrossCutting.IoC", "src\Desafio.CrossCutting.IoC\Desafio.CrossCutting.IoC.csproj", "{A864F671-DA6F-47A3-B6C5-7C79893290A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Core.Services", "src\Desafio.Core.Services\Desafio.Core.Services\Desafio.Core.Services.csproj", "{F4CCB21F-A67A-45A3-A58D-78D8E692CAD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Core.Services", "src\Desafio.Core.Services\Desafio.Core.Services.csproj", "{E4D4FCCB-FB31-471C-9B6A-615605D18412}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,10 @@ Global
 		{A864F671-DA6F-47A3-B6C5-7C79893290A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A864F671-DA6F-47A3-B6C5-7C79893290A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A864F671-DA6F-47A3-B6C5-7C79893290A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4CCB21F-A67A-45A3-A58D-78D8E692CAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4CCB21F-A67A-45A3-A58D-78D8E692CAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4CCB21F-A67A-45A3-A58D-78D8E692CAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4CCB21F-A67A-45A3-A58D-78D8E692CAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D4FCCB-FB31-471C-9B6A-615605D18412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D4FCCB-FB31-471C-9B6A-615605D18412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D4FCCB-FB31-471C-9B6A-615605D18412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D4FCCB-FB31-471C-9B6A-615605D18412}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +69,7 @@ Global
 		{CF47B8F8-8EBC-49BD-A925-DECA2B310CA5} = {14CDFA4C-F6D3-4387-B64E-9B5619366FA9}
 		{23A3D558-990A-42A9-9847-D41ED0FAB1B4} = {7698A6C0-7A6E-43C5-9F9D-0785CE2553AF}
 		{A864F671-DA6F-47A3-B6C5-7C79893290A3} = {E66503AE-84ED-4391-B75A-5C9066306554}
-		{F4CCB21F-A67A-45A3-A58D-78D8E692CAD6} = {8355744C-C580-44BD-A8B9-5EDC8661E742}
+		{E4D4FCCB-FB31-471C-9B6A-615605D18412} = {8355744C-C580-44BD-A8B9-5EDC8661E742}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0D6E341-764E-4DAA-B97B-D82CD70750C1}
