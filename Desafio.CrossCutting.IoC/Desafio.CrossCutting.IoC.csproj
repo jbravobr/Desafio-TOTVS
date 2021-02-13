@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\src\Desafio.Core.Domain\Desafio.Core.Domain.csproj" />
+    <ProjectReference Include="..\src\Desafio.Infra\Desafio.Infra.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,12 +1,57 @@
+networks:
+  dbnetwork:
+    driver: bridge
 services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_DATABASE: dbPdv
+      MSSQL_DATABASE_COLLATE: SQL_Latin1_General_CP1_CI_AI
+      MSSQL_PASSWORD: minhaSenha
+      MSSQL_PID: Express
+      MSSQL_USER: meuUsuario
+      SA_PASSWORD: 8k3W2C2BVzAW9p
+    image: luizcarlosfaria/mssql-server-linux
+    networks:
+      dbnetwork: {}
+    ports:
+    - published: 1433
+      target: 1433
+  mongo:
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_ROOT_USERNAME: root
+    image: mongo
+    networks:
+      dbnetwork: {}
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+  mongo-express:
+    environment:
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+    image: mongo-express
+    networks:
+      dbnetwork: {}
+    ports:
+    - published: 8081
+      target: 8081
+    restart: always
   web:
     build:
       context: C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS
       dockerfile: Web/Dockerfile
+    depends_on:
+      db:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: web
+    networks:
+      dbnetwork: {}
     ports:
     - target: 80
     - target: 443

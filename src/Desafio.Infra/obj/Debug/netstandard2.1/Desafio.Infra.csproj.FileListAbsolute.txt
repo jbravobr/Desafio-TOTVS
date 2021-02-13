@@ -1,4 +1,12 @@
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\bin\Debug\netstandard2.1\Desafio.Infra.deps.json
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\bin\Debug\netstandard2.1\Desafio.Infra.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\bin\Debug\netstandard2.1\Desafio.Infra.pdb
 C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\bin\Debug\netstandard2.1\Desafio.Core.Domain.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\bin\Debug\netstandard2.1\Desafio.Core.Domain.pdb
 C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.csprojAssemblyReference.cache
 C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.AssemblyInfoInputs.cache
 C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.AssemblyInfo.cs
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.csproj.CopyComplete
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Infra\obj\Debug\netstandard2.1\Desafio.Infra.pdb

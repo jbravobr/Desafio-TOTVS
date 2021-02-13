@@ -1,0 +1,9 @@
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\bin\Debug\netstandard2.1\Desafio.Core.Domain.deps.json
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\bin\Debug\netstandard2.1\Desafio.Core.Domain.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\bin\Debug\netstandard2.1\Desafio.Core.Domain.pdb
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\obj\Debug\netstandard2.1\Desafio.Core.Domain.csprojAssemblyReference.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\obj\Debug\netstandard2.1\Desafio.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\obj\Debug\netstandard2.1\Desafio.Core.Domain.AssemblyInfo.cs
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\obj\Debug\netstandard2.1\Desafio.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\obj\Debug\netstandard2.1\Desafio.Core.Domain.dll
+C:\Users\Rodrigo Amaro\source\repos\Desafio-TOTOVS\src\Desafio.Core.Domain\obj\Debug\netstandard2.1\Desafio.Core.Domain.pdb

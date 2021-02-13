@@ -3,7 +3,7 @@ version: '3.4'
 services:
   web:
     image: web:dev
-    container_name: Web_1
+    container_name: Web
     build:
       target: base
       labels:
