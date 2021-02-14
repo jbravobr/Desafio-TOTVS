@@ -16,8 +16,9 @@ namespace Desafio.Infra.Repositories.Implementations.Reads
 
         public User CheckUserExists(string email, string password)
         {
+            var sql = $"SELECT * FROM [User] WHERE Email = '{email}' AND Password = '{password}'";
             return Connection.Query<User>(
-                $"SELECT * FROM User WHERE Email = {email} AND Password = {password}",
+                sql,
                 transaction: Transaction
             ).FirstOrDefault();
         }

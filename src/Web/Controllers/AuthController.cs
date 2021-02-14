@@ -42,9 +42,9 @@ namespace Web.Controllers
                     Usuario = userExists
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return BadRequest(new { Message = "Ocorreu algum erro interno na aplicação, por favor tente novamente." });
+                return BadRequest(new { Message = "Ocorreu algum erro interno na aplicação, por favor tente novamente.", ExceptionMessage = ex.Message });
             }
         }
     }

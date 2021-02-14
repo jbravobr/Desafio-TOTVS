@@ -26,7 +26,7 @@ namespace Web.Models.Response
 
                 foreach (var item in BankNotes.Where(b => b.Quantity > 0))
                 {
-                    sb.Append($"Entregar {item.Quantity} nota de R${item.Value},00");
+                    sb.AppendLine($"Entregar {item.Quantity} nota de R$ {item.Value},00");
                 }
             }
 
@@ -39,14 +39,14 @@ namespace Web.Models.Response
                  * 01
                  */
 
-                BankCoins.Add(new BankCoinsResponse(50, notes[0]));
-                BankCoins.Add(new BankCoinsResponse(10, notes[1]));
-                BankCoins.Add(new BankCoinsResponse(05, notes[2]));
-                BankCoins.Add(new BankCoinsResponse(01, notes[3]));
+                BankCoins.Add(new BankCoinsResponse(50, coins[0]));
+                BankCoins.Add(new BankCoinsResponse(10, coins[1]));
+                BankCoins.Add(new BankCoinsResponse(05, coins[2]));
+                BankCoins.Add(new BankCoinsResponse(01, coins[3]));
 
                 foreach (var item in BankCoins.Where(b => b.Quantity > 0))
                 {
-                    sb.Append($"Entregar {item.Quantity} moeda de R$0,{item.Value}");
+                    sb.AppendLine($"Entregar {item.Quantity} moeda de R$ {item.Value * 0.01}");
                 }
             }
 
@@ -56,8 +56,8 @@ namespace Web.Models.Response
             }
         }
 
-        public ICollection<BankNoteResponse> BankNotes { get; private set; }
-        public ICollection<BankCoinsResponse> BankCoins { get; private set; }
+        public ICollection<BankNoteResponse> BankNotes { get; private set; } = new List<BankNoteResponse>();
+        public ICollection<BankCoinsResponse> BankCoins { get; private set; } = new List<BankCoinsResponse>();
         public string Mensagem { get; private set; }
     }
 

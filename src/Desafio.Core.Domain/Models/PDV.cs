@@ -113,7 +113,7 @@ namespace Desafio.Core.Domain.Models
                 for (int i = 0; i < BankCoins.Count; i++)
                 {
                     var qtd_coins = fractional / BankCoins[i];
-                    BankCoinsToReturn.Add(qtd_coins);
+                    BankCoinsToReturn[i] += qtd_coins;
 
                     fractional -= (qtd_coins * BankCoins[i]);
                 }
