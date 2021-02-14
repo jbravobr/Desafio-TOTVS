@@ -1,4 +1,5 @@
-﻿using Desafio.Infra.Repositories.Context;
+﻿using Desafio.Core.Domain.Models;
+using Desafio.Infra.Repositories.Context;
 using Desafio.Infra.Repositories.Contracts.Base;
 using Desafio.Infra.Repositories.Contracts.Writes;
 using Desafio.Infra.Repositories.Implementations;
@@ -22,10 +23,20 @@ namespace Desafio.CrossCutting.IoC
             container.Register<DatabaseContext>(() =>
             {
                 var builder = new DbContextOptionsBuilder<DatabaseContext>().UseSqlServer(connection);
-                return new DatabaseContext(builder.Options);
+                var context = new DatabaseContext(builder.Options);
+                context.Database.Migrate();
+                Seed(context);
+
+                return context;
             }, Lifestyle.Scoped);
 
             container.Register<IGatewayLogRepository, GatewayLogRepository>(Lifestyle.Transient);
+        }
+
+        private static void Seed(DatabaseContext context)
+        {
+            context.Users.Add(new User() { Email = "jbravo.br@gmail.com", Password = "P@ssw0rd!", Enabled = true });
+            context.SaveChanges();
         }
     }
 }

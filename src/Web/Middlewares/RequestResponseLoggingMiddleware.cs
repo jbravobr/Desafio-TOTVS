@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.IO;
+using SimpleInjector;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -120,9 +121,9 @@ namespace Web.Middlewares
 
     public static class RequestResponseLoggingMiddlewareExtensions
     {
-        public static IApplicationBuilder UseRequestResponseLogging(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseRequestResponseLogging(this IApplicationBuilder builder, Container container)
         {
-            return builder.UseMiddleware<RequestResponseLoggingMiddleware>();
+            return builder.UseMiddleware<RequestResponseLoggingMiddleware>(container);
         }
     }
 }

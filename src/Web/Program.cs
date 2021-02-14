@@ -7,7 +7,7 @@ namespace Web
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().MigrationAndSeed().Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
