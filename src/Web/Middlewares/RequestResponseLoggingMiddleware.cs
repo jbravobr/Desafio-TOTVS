@@ -14,7 +14,7 @@ namespace Web.Middlewares
     /// <summary>
     /// Middleware responsável por registrar os Requests e Response da API
     /// </summary>
-    public class RequestResponseLoggingMiddleware
+    public class RequestResponseLoggingMiddleware : IMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
@@ -22,12 +22,8 @@ namespace Web.Middlewares
 
         private readonly IGatewayLogServices _gatewayLogServices;
 
-        public RequestResponseLoggingMiddleware(RequestDelegate next,
-                                                ILoggerFactory loggerFactory,
-                                                IGatewayLogServices gatewayLogServices)
+        public RequestResponseLoggingMiddleware(IGatewayLogServices gatewayLogServices)
         {
-            _next = next;
-            _logger = loggerFactory.CreateLogger<RequestResponseLoggingMiddleware>();
             _recyclableMemoryStreamManager = new RecyclableMemoryStreamManager();
             _gatewayLogServices = gatewayLogServices;
         }
@@ -112,7 +108,7 @@ namespace Web.Middlewares
             return textWriter.ToString();
         }
 
-        public async Task Invoke(HttpContext context)
+        public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             await LogRequest(context);
             await LogResponse(context);
