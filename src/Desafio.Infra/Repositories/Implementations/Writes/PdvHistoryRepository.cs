@@ -45,8 +45,9 @@ namespace Desafio.Infra.Repositories.Implementations.Base
 
         public ICollection<PdvHistory> GetPaymentsHistory(DateTime startDate, DateTime endDate)
         {
+            var sql = $"SELECT * FROM [PdvHistory] WHERE CreatedAt >= {startDate.ToString("yyyy-MM-dd")} AND CreateAt <= {endDate.ToString("yyyy-MM-dd")}";
             return context.Database.GetDbConnection().Query<PdvHistory>(
-                $"SELECT * FROM PdvHistory WHERE CreatedAt >= {startDate.ToString("yyyy-MM-dd")} AND CreateAt <= {endDate.ToString("yyyy-MM-dd")}"
+                sql
             ).ToList();
         }
     }

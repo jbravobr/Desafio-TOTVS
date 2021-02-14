@@ -41,6 +41,26 @@ namespace Web.Controllers
         }
 
         [HttpGet]
+        [Route("api/pdv/history")]
+        public IActionResult History()
+        {
+            try
+            {
+                var results = _pdvServices.GetPdvHistories(new DateTime(2020, 01, 01), DateTime.Now);
+                if (results != null && results.Count > 0)
+                {
+                    return Ok(new PdvHistoryResponse(results));
+                }
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
         [Authorize(Roles = "Gerente")]
         [Route("api/pdv/{pdvID}/close")]
         public async Task<IActionResult> Close(Guid pdvID)

@@ -88,6 +88,7 @@ namespace Desafio.Core.Domain.Models
 
             var interger = Convert.ToInt32(Math.Floor(change));
             var fractional = Convert.ToInt32(Math.Round((change - (int)change) * 100));
+            var control = false;
 
             if (change > 0)
             {
@@ -108,12 +109,20 @@ namespace Desafio.Core.Domain.Models
 
                         interger -= (qtd_coins * BankCoins[i] / 100);
                     }
+                    control = true;
                 }
 
                 for (int i = 0; i < BankCoins.Count; i++)
                 {
                     var qtd_coins = fractional / BankCoins[i];
-                    BankCoinsToReturn[i] += qtd_coins;
+                    if (control)
+                    {
+                        BankCoinsToReturn[i] += qtd_coins;
+                    }
+                    else
+                    {
+                        BankCoinsToReturn.Add(qtd_coins);
+                    }
 
                     fractional -= (qtd_coins * BankCoins[i]);
                 }
