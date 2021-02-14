@@ -61,10 +61,9 @@ namespace Desafio.Core.Domain.Models
             }
         }
 
-        private bool CheckBalance(double amount)
+        public bool CheckBalance(double amount)
         {
-            if (BankNotes.Sum(b => b) < amount ||
-                BankCoins.Sum(b => b) < amount)
+            if (BankNotes.Sum(b => b) + BankCoins.Sum(b => b) < amount)
             {
                 return false;
             }

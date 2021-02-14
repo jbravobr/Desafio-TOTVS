@@ -12,6 +12,26 @@ namespace Desafio.Tests.Domain.Models
         private List<int> GenerateTestBankNotesInsufficient => new List<int> { 10 };
 
         [Fact]
+        public void CheckBalance_OK()
+        {
+            Pdv pdv = new Pdv();
+            pdv.InitiatePdv();
+            var check = pdv.CheckBalance(70);
+
+            Assert.True(check);
+        }
+
+        [Fact]
+        public void CheckBalance_Not_OK()
+        {
+            Pdv pdv = new Pdv();
+            pdv.InitiatePdv();
+            var check = pdv.CheckBalance(1500);
+
+            Assert.False(check);
+        }
+
+        [Fact]
         public void InitiatePdv_With_Positive_Balance_For_BankNotes()
         {
             Pdv _pdv = new Pdv();
