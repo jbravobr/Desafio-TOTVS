@@ -16,14 +16,15 @@ namespace Web.Middlewares
     /// </summary>
     public class RequestResponseLoggingMiddleware : IMiddleware
     {
-        private readonly RequestDelegate _next;
         private readonly ILogger _logger;
         private readonly RecyclableMemoryStreamManager _recyclableMemoryStreamManager;
 
         private readonly IGatewayLogServices _gatewayLogServices;
 
-        public RequestResponseLoggingMiddleware(IGatewayLogServices gatewayLogServices)
+        public RequestResponseLoggingMiddleware(IGatewayLogServices gatewayLogServices,
+                                                ILogger logger)
         {
+            _logger = logger;
             _recyclableMemoryStreamManager = new RecyclableMemoryStreamManager();
             _gatewayLogServices = gatewayLogServices;
         }
@@ -57,13 +58,13 @@ namespace Web.Middlewares
             context.Request.Body.Position = 0;
         }
 
-        private async Task LogResponse(HttpContext context)
+        private async Task LogResponse(HttpContext context, RequestDelegate next)
         {
             var originalBodyStream = context.Response.Body;
             await using var responseBody = _recyclableMemoryStreamManager.GetStream();
             context.Response.Body = responseBody;
 
-            await _next(context);
+            await next(context);
             context.Response.Body.Seek(0, SeekOrigin.Begin);
 
             var text = await new StreamReader(context.Response.Body).ReadToEndAsync();
@@ -111,7 +112,7 @@ namespace Web.Middlewares
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             await LogRequest(context);
-            await LogResponse(context);
+            await LogResponse(context, next);
         }
     }
 
