@@ -46,7 +46,7 @@ namespace Web.Models.Response
 
                 foreach (var item in BankCoins.Where(b => b.Quantity > 0))
                 {
-                    sb.AppendLine($"Entregar {item.Quantity} moeda de R$ {item.Value * 0.01}");
+                    sb.AppendLine($"Entregar {item.Quantity} moeda de R$ {(item.Value * 0.01).ToString("N2").Replace(".", ",")}");
                 }
             }
 
